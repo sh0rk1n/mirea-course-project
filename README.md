@@ -1,6 +1,9 @@
 # Мой первый проект
+
 ## Проект
+
 Этот репозиторий является каркасом для будущего веб-приложения.
+
 ## Ссылки
-- [Публичная страница на GitHub Pages](https://sh0rk1n.github.io/
-mirea-course-project/)
+
+- [Публичная страница на GitHub Pages](https://sh0rk1n.github.io/mirea-course-project/)
