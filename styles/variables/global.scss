@@ -10,64 +10,236 @@ $color-primary: #2c2753;
 // ---------------------------
 .container {
   width: 100%;
-  max-width: 1200px;  
-  margin: 0 auto;     
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 // ---------------------------
 // Flex utilities
 // ---------------------------
 .flex {
-  display: flex;      
+  display: flex;
 }
 
 .flex-column {
-  flex-direction: column; 
+  flex-direction: column;
 }
 
 .justify-between {
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
 .justify-center {
-  justify-content: center;       
+  justify-content: center;
 }
 
 .align-center {
-  align-items: center;           
+  align-items: center;
+}
+
+// ---------------------------
+// Gap utilities
+// ---------------------------
+.gap-sm {
+  gap: 0.5rem;
+}
+
+.gap-md {
+  gap: 1rem;
+}
+
+.gap-lg {
+  gap: 2rem;
+}
+
+.gap-xl {
+  gap: 4rem;
+}
+
+// ---------------------------
+// Padding utilities
+// ---------------------------
+.padding-sm {
+  padding: 0.5rem;
+}
+
+.padding-md {
+  padding: 1rem;
+}
+
+.padding-lg {
+  padding: 2rem;
+}
+
+.padding-xl {
+  padding: 4rem;
+}
+
+.padding-2xl {       
+  padding: 5rem;
+}
+
+// ---------------------------
+// Padding-top utilities
+// ---------------------------
+.padding-top-sm {  
+   padding-top: 0.5rem; 
+  }  
+
+.padding-top-md {   
+  padding-top: 1rem;   
+} 
+
+.padding-top-lg { 
+    padding-top: 2rem;  
+   }  
+
+.padding-top-xl {  
+   padding-top: 3rem;   
+  }  
+
+.padding-top-2xl { 
+   padding-top: 4rem;  
+   }  
+
+.padding-top-3xl {  
+  padding-top: 5rem; 
+  }  
+
+.padding-y-lg {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.padding-x-2xl {
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 // ---------------------------
 // Text utilities
 // ---------------------------
 .text-center {
-  text-align: center;  
-}
-
-.color-primary {
-  color: $color-primary; 
+  text-align: center;
 }
 
 // ---------------------------
-// Padding utilities
+// Border utilities
 // ---------------------------
-.padding {
-  &-0 { padding: 0; }          
-  &-1 { padding: 5px ; }      
-  &-2 { padding: 10px ; }      
-  &-3 { padding: 20px ; }      
-  &-4 { padding: 50px; }     
-  &-vertical {                             
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  &-horizontal {                         
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  &-top { padding-top: 20px; }            
-  &-bottom { padding-bottom: 20px; }     
-  &-left { padding-left: 20px; }        
-  &-right { padding-right: 20px; }       
+.border-top {
+  border-top: 1px solid $color-gray;
 }
 
+// ---------------------------
+// Background utilities
+// ---------------------------
+.bg-primary {
+  background-color: $color-primary;
+}
+
+.bg-light {
+  background-color: $color-gray;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+// ---------------------------
+// Color utilities
+// ---------------------------
+.text-primary {
+  color: $color-primary;
+}
+
+.text-white {
+  color: #fff;
+}
+
+// ---------------------------
+// Font weight utilities
+// ---------------------------
+.fw-200 {
+  font-weight: 200;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+// ---------------------------
+// Heading utilities
+// ---------------------------
+.heading-lg {
+  font-family: $font-family-main;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.heading-md {
+  font-family: $font-family-main;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.heading-sm {
+  font-family: $font-family-main;
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.heading-xs {
+  font-family: $font-family-main;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+// ---------------------------
+// Text size utilities
+// ---------------------------
+.text-md {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+
+.text-sm {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: $color-primary;
+}
+
+.text-xs {
+  font-size: 0.875rem;
+}
+
+.text-price {
+  font-size: 1rem;
+  color: $color-primary;
+}
+
+// ---------------------------
+// Max-width utilities
+// ---------------------------
+.max-w-sm {
+  max-width: 20rem;   /* ~320px */
+}
+
+.max-w-md {
+  max-width: 28rem;   /* ~448px — идеально для читаемого текста */
+}
+
+.max-w-lg {
+  max-width: 36rem;   /* ~576px */
+}
+
+.max-w-xl {
+  max-width: 42rem;   /* ~672px */
+}
