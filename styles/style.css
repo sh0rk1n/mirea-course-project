@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -64,58 +65,306 @@ button {
   align-items: center;
 }
 
+.gap-sm {
+  gap: 0.5rem;
+}
+
+.gap-md {
+  gap: 1rem;
+}
+
+.gap-lg {
+  gap: 2rem;
+}
+
+.gap-xl {
+  gap: 4rem;
+}
+
+.padding-sm {
+  padding: 0.5rem;
+}
+
+.padding-md {
+  padding: 1rem;
+}
+
+.padding-lg {
+  padding: 2rem;
+}
+
+.padding-xl {
+  padding: 4rem;
+}
+
+.padding-2xl {
+  padding: 5rem;
+}
+
+.padding-top-sm {
+  padding-top: 0.5rem;
+}
+
+.padding-top-md {
+  padding-top: 1rem;
+}
+
+.padding-top-lg {
+  padding-top: 2rem;
+}
+
+.padding-top-xl {
+  padding-top: 3rem;
+}
+
+.padding-top-2xl {
+  padding-top: 4rem;
+}
+
+.padding-top-3xl {
+  padding-top: 5rem;
+}
+
+.padding-y-lg {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.padding-x-2xl {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 .text-center {
   text-align: center;
 }
 
-.color-primary {
+.border-top {
+  border-top: 1px solid rgb(243, 243, 243);
+}
+
+.bg-primary {
+  background-color: #2c2753;
+}
+
+.bg-light {
+  background-color: rgb(243, 243, 243);
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.text-primary {
   color: #2c2753;
 }
 
-.padding-0 {
-  padding: 0;
+.text-white {
+  color: #fff;
 }
-.padding-1 {
-  padding: 5px;
+
+.fw-200 {
+  font-weight: 200;
 }
-.padding-2 {
-  padding: 10px;
+
+.fw-300 {
+  font-weight: 300;
 }
-.padding-3 {
-  padding: 20px;
+
+.fw-400 {
+  font-weight: 400;
 }
-.padding-4 {
-  padding: 50px;
+
+.fw-bold {
+  font-weight: bold;
 }
-.padding-vertical {
-  padding-top: 20px;
-  padding-bottom: 20px;
+
+.heading-lg {
+  font-family: "Clash", sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.2;
 }
-.padding-horizontal {
-  padding-left: 20px;
-  padding-right: 20px;
+
+.heading-md {
+  font-family: "Clash", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
-.padding-top {
-  padding-top: 20px;
+
+.heading-sm {
+  font-family: "Clash", sans-serif;
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
 }
-.padding-bottom {
-  padding-bottom: 20px;
+
+.heading-xs {
+  font-family: "Clash", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
-.padding-left {
-  padding-left: 20px;
+
+.text-md {
+  font-size: 1.25rem;
+  margin: 1rem 0;
 }
-.padding-right {
-  padding-right: 20px;
+
+.text-sm {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #2c2753;
+}
+
+.text-xs {
+  font-size: 0.875rem;
+}
+
+.text-price {
+  font-size: 1rem;
+  color: #2c2753;
+}
+
+.max-w-sm {
+  max-width: 20rem; /* ~320px */
+}
+
+.max-w-md {
+  max-width: 28rem; /* ~448px — идеально для читаемого текста */
+}
+
+.max-w-lg {
+  max-width: 36rem; /* ~576px */
+}
+
+.max-w-xl {
+  max-width: 42rem; /* ~672px */
 }
 
 @font-face {
   font-family: "Clash";
-  src: url("../assets/fonts/ClashDisplay-Variable.ttf") format("truetype");
+  src: url("../assets/fonts/ClashDisplay-Variable.ttf") format("truetype-variations");
+  font-weight: 200 700;
+  font-style: normal;
 }
 @font-face {
   font-family: "Satoshi";
-  src: url("../assets/fonts/Satoshi-Variable.ttf") format("truetype");
+  src: url("../assets/fonts/Satoshi-Variable.ttf") format("truetype-variations");
+  font-weight: 300 900;
+  font-style: normal;
 }
+.logo.brand {
+  font-family: "Clash", sans-serif;
+  font-size: 1.5rem;
+  color: #2c2753;
+}
+
+.link-nav {
+  font-size: 0.75rem;
+  color: #2c2753;
+  text-decoration: none;
+  padding: 0 0.5rem;
+}
+
+.link-footer {
+  font-size: 0.875rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  text-wrap: nowrap;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #2c2753;
+}
+
+.btn-secondary {
+  color: #fff;
+  background-color: #4a4666;
+}
+
+.btn-tertiary {
+  color: #2c2753;
+  background-color: rgb(243, 243, 243);
+}
+
+.btn-white {
+  color: #2c2753;
+  background-color: #fff;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0 0.5rem 0 0;
+}
+
+.input-email {
+  background-color: rgb(243, 243, 243);
+  border: none;
+  padding: 1rem 5rem 1rem 2rem;
+  font-size: 1rem;
+  color: #000;
+}
+
+.input-email-dark {
+  background-color: rgba(255, 255, 255, 0.205);
+  color: #fff;
+}
+
+.benefit-card {
+  flex: 1;
+  text-align: left;
+}
+
+.product-card {
+  flex: 1;
+  color: #2c2753;
+  transition: transform 0.2s;
+}
+.product-card:hover {
+  transform: translateY(-2px);
+}
+
+.hero-content {
+  flex: 3;
+  max-width: 70%;
+}
+.hero-content h1 {
+  max-width: 450px;
+  margin-bottom: 2rem;
+}
+.hero-content p {
+  max-width: 600px;
+  margin-top: 10rem;
+}
+
+.img-hero {
+  flex: 2.3;
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+}
+
+.outlets-content {
+  flex: 1;
+}
+.outlets-content button {
+  margin-top: 6rem;
+}
+
+.img-outlets {
+  flex: 1;
+  width: 50%;
+  height: auto;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -125,191 +374,65 @@ body {
 }
 
 .header {
-  padding: 20px;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+.nav {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
 }
 
 .cart {
-  margin-right: 10px;
-}
-
-nav {
-  border-top: 1px solid rgb(243, 243, 243);
-  margin-top: 10px;
-  padding-top: 10px;
-}
-nav a {
-  font-size: 12px;
-  font-weight: 300;
-  color: #2c2753;
-}
-nav li:not(:last-child) a {
-  padding-left: 20px;
+  margin-right: 1rem;
 }
 
 .hero {
-  padding-bottom: 100px;
-}
-.hero-content {
-  align-items: center;
-  background-color: #2c2753;
-  padding: 60px;
-}
-.hero-content h1 {
-  color: white;
-  font-weight: 300;
-  padding-bottom: 40px;
-  max-width: 450px;
-}
-.hero-content button {
-  color: white;
-  font-weight: 300;
-  background-color: #4a4666;
-  padding: 20px 30px;
-}
-.hero-content p {
-  color: white;
-  font-size: 20px;
-  max-width: 600px;
-  font-weight: 300;
-  padding-top: 225px;
+  padding-bottom: 3rem;
 }
 
+.benefits {
+  margin-top: 2rem;
+}
 .benefits h2 {
-  font-weight: 400;
-  padding-bottom: 40px;
+  margin-bottom: 2rem;
 }
 .benefits h3 {
-  font-weight: 400;
-  padding: 10px 0;
+  margin: 0.5rem 0;
 }
 
 .products {
-  padding-top: 100px;
+  margin-top: 5rem;
 }
 .products h2 {
-  font-weight: 400;
-  padding-bottom: 20px;
-}
-.products button {
-  color: #2c2753;
-  background-color: rgb(243, 243, 243);
-  font-weight: 400;
-  padding: 20px 30px;
+  margin-bottom: 1rem;
 }
 .products-content {
-  gap: 15px;
-  color: #2c2753;
-  padding-bottom: 30px;
+  margin-bottom: 2rem;
 }
-.products-content h3 {
-  font-weight: 400;
-  padding: 10px 0;
+.products h3 {
+  margin: 0.5rem 0;
 }
 
 .form {
-  margin-top: 100px;
-  background-color: rgb(243, 243, 243);
+  margin-top: 5rem;
   width: 100%;
-  padding: 50px 0;
-}
-.form div {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 80px;
-}
-.form div h2 {
-  font-weight: 400;
-  margin-bottom: 10px;
-}
-.form div p {
-  text-align: center;
-  padding-bottom: 50px;
-}
-.form div form {
-  display: flex;
-}
-.form div form input {
   background-color: rgb(243, 243, 243);
-  border: none;
-  padding: 15px 80px 15px 30px;
-  text-align: left;
-}
-.form div form button {
-  color: white;
-  background-color: #2c2753;
-  font-weight: 400;
-  padding: 0 40px;
-  text-wrap: nowrap;
 }
 
 .outlets {
-  gap: 100px;
-}
-.outlets-content {
-  margin-top: 70px;
-}
-.outlets-content h2 {
-  font-weight: 400;
-}
-.outlets-content p {
-  font-weight: 400;
-  margin-top: 30px;
-}
-.outlets-content button {
-  color: #2c2753;
-  background-color: rgb(243, 243, 243);
-  font-weight: 400;
-  padding: 20px 30px;
-  margin-top: 150px;
+  margin-top: 5rem;
 }
 
 .footer {
-  background-color: #2c2753;
-  padding: 50px 50px 20px 50px;
-}
-.footer h4 {
-  color: white;
-  font-weight: 300;
-  margin-bottom: 10px;
-}
-.footer li {
-  margin-bottom: 10px;
-}
-.footer a {
-  color: white;
-  font-weight: 200;
-  text-decoration: none;
-}
-.footer form {
-  display: flex;
-}
-.footer form input {
-  background-color: rgba(255, 255, 255, 0.205);
-  border: none;
-  padding: 15px 250px 15px 30px;
-  text-align: left;
-}
-.footer form input::placeholder {
-  padding-left: 5px;
-}
-.footer form button {
-  color: #2c2753;
-  background-color: white;
-  font-weight: 400;
-  padding: 0 20px;
-  text-wrap: nowrap;
-}
-.footer p {
-  color: white;
-  font-weight: 200;
+  margin-top: 5rem;
+  padding: 3rem 3rem 1rem 3rem;
 }
 
 .copyright {
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid rgb(27, 114, 245);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top-color: rgb(27, 114, 245);
 }
 
 /*# sourceMappingURL=style.css.map */
