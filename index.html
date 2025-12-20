@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
+    <link rel="stylesheet" href="styles/style.css" />
+
     <title>Avion</title>
   </head>
   <body>
-    <header>
-      <div>
+    <header class="header container">
+      <div class="flex justify-between">
         <button>
           <img src="assets/icons/Search.png" alt="Search" />
         </button>
@@ -16,7 +18,7 @@
         <div>Avion</div>
 
         <div>
-          <button>
+          <button class="cart">
             <img src="assets/icons/Shopping--cart.png" alt="Shopping Cart" />
           </button>
           <button>
@@ -25,8 +27,8 @@
         </div>
       </div>
 
-      <nav>
-        <ul>
+      <nav class="nav flex justify-center">
+        <ul class="flex">
           <li><a href="#plant">Plant pots</a></li>
           <li><a href="#ceramics">Ceramics</a></li>
           <li><a href="#tables">Tables</a></li>
@@ -39,8 +41,8 @@
     </header>
 
     <main>
-      <section>
-        <div>
+      <section class="hero container flex">
+        <div class="hero-content">
           <h1>The furniture brand for the future, with timeless designs</h1>
           <button>View collection</button>
           <p>
@@ -53,64 +55,77 @@
         <img src="assets/img/Right_Image.png" alt="Photo Chair" />
       </section>
 
-      <section>
-        <h2>What makes our brand different</h2>
-        <div>
-          <img src="assets/icons/Delivery.png" alt="Delivery" />
-          <h3>Next day as standard</h3>
-          <p>Order before 3pm and get your order the next day as standard</p>
-        </div>
-        <div>
-          <img src="assets/icons/Checkmark--outline.png" alt="Checkmark" />
-          <h3>Made by true artisans</h3>
-          <p>Handmade crafted goods made with real passion and craftsmanship</p>
-        </div>
-        <div>
-          <img src="assets/icons/Purchase.png" alt="Purchase" />
-          <h3>Unbeatable prices</h3>
-          <p>
-            For our materials and quality you won’t find better prices anywhere
-          </p>
-        </div>
-        <div>
-          <img src="assets/icons/Sprout.png" alt="Sprout" />
-          <h3>Recycled packaging</h3>
-          <p>
-            We use 100% recycled packaging to ensure our footprint is manageable
-          </p>
+      <section class="benefits container color-primary">
+        <h2 class="text-center">What makes our brand different</h2>
+        <div class="flex justify-between">
+          <div class="">
+            <img src="assets/icons/Delivery.png" alt="Delivery" />
+            <h3>Next day as standard</h3>
+            <p>
+              Order before 3pm and get your order <br />
+              <!-- TODO: br Плохо для адаптива -->
+              the next day as standard
+            </p>
+          </div>
+          <div>
+            <img src="assets/icons/Checkmark--outline.png" alt="Checkmark" />
+            <h3>Made by true artisans</h3>
+            <p>
+              Handmade crafted goods made with <br />
+              real passion and craftsmanship
+            </p>
+          </div>
+          <div>
+            <img src="assets/icons/Purchase.png" alt="Purchase" />
+            <h3>Unbeatable prices</h3>
+            <p>
+              For our materials and quality you won’t <br />
+              find better prices anywhere
+            </p>
+          </div>
+          <div>
+            <img src="assets/icons/Sprout.png" alt="Sprout" />
+            <h3>Recycled packaging</h3>
+            <p>
+              We use 100% recycled packaging to <br />
+              ensure our footprint is manageable
+            </p>
+          </div>
         </div>
       </section>
 
-      <section>
-        <h2>New ceramics</h2>
-        <div>
+      <section class="products container">
+        <h2 class="color-primary">New ceramics</h2>
+        <div class="products-content flex">
           <article>
             <img src="assets/img/Photo.png" alt="Photo" />
             <h3>The Dandy chair</h3>
             <p>£250</p>
           </article>
           <article>
-            <img src="assets/img/Photo(1).png" alt="Photo" />
+            <img src="assets/img/Photo-1.png" alt="Photo" />
             <h3>Rustic Vase Set</h3>
             <p>£155</p>
           </article>
           <article>
-            <img src="assets/img/Photo(2).png" alt="Photo" />
+            <img src="assets/img/Photo-2.png" alt="Photo" />
             <h3>The Silky Vase</h3>
             <p>£125</p>
           </article>
           <article>
-            <img src="assets/img/Photo(3).png" alt="Photo" />
+            <img src="assets/img/Photo-3.png" alt="Photo" />
             <h3>The Lucy Lamp</h3>
             <p>£399</p>
           </article>
         </div>
-        <button>View collection</button>
+        <div class="flex justify-center">
+          <button>View collection</button>
+        </div>
       </section>
 
-      <section>
-        <h2>Our popular products</h2>
-        <div>
+      <section class="products container">
+        <h2 class="color-primary">Our popular products</h2>
+        <div class="products-content flex">
           <article>
             <img src="assets/img/Large.png" alt="Sofa" />
             <h3>The Poplar suede sofa</h3>
@@ -122,50 +137,53 @@
             <p>£250</p>
           </article>
           <article>
-            <img src="assets/img/Photo(3).png" alt="Chair" />
+            <img src="assets/img/Photo-3.png" alt="Chair" />
             <h3>The Lucy Lamp</h3>
             <p>£399</p>
           </article>
         </div>
-        <button>View collection</button>
+        <div class="flex justify-center">
+          <button>View collection</button>
+        </div>
       </section>
 
-      <aside>
-        <h2>Join the club and get the benefits</h2>
-        <p>
-          Sign up for our newsletter and receive exclusive offers on new ranges,
-          sales, pop up stores and more
-        </p>
-        <form>
-          <input type="email" placeholder="your@email.com" />
-          <button type="submit">Sign up</button>
-        </form>
+      <aside class="form">
+        <div class="container">
+          <h2 class="color-primary">Join the club and get the benefits</h2>
+          <p>
+            Sign up for our newsletter and receive exclusive offers on new
+            <br />
+            ranges, sales, pop up stores and more
+          </p>
+          <form>
+            <input type="email" placeholder="your@email.com" />
+            <button type="submit">Sign up</button>
+          </form>
+        </div>
       </aside>
 
-      <section>
-        <div>
-          <div>
-            <h2>
-              From a studio in London to a global brand with over 400 outlets
-            </h2>
-            <p>
-              When we started Avion, the idea was simple. Make high quality
-              furniture affordable and available for the mass market.
-            </p>
-            <p>
-              Handmade, and lovingly crafted furniture and homeware is what we
-              live, breathe and design so our Chelsea boutique become the hotbed
-              for the London interior design community.
-            </p>
-            <button>Get in touch</button>
-          </div>
-          <img src="assets/img/Image.png" alt="Sofa" />
+      <section class="outlets container flex">
+        <div class="outlets-content">
+          <h2 class="color-primary">
+            From a studio in London to a global brand with over 400 outlets
+          </h2>
+          <p>
+            When we started Avion, the idea was simple. Make high quality
+            furniture affordable and available for the mass market.
+          </p>
+          <p>
+            Handmade, and lovingly crafted furniture and homeware is what we
+            live, breathe and design so our Chelsea boutique become the hotbed
+            for the London interior design community.
+          </p>
+          <button>Get in touch</button>
         </div>
+        <img src="assets/img/Image.png" alt="Sofa" />
       </section>
     </main>
 
-    <footer>
-      <div>
+    <footer class="footer">
+      <div class="container flex justify-between">
         <div>
           <h4>Menu</h4>
           <ul>
@@ -209,11 +227,13 @@
         </div>
       </div>
 
-      <div>
+      <div class="copyright container flex justify-between">
         <p>Copyright 2022 Avion LTD</p>
-        <img src="assets/icons/Logo--linkedin.png" alt="Logo" />
-        <img src="assets/icons/Logo--pinterest.png" alt="Logo" />
-        <img src="assets/icons/Logo--skype.png" alt="Logo" />
+        <div>
+          <img src="assets/icons/Logo--linkedin.png" alt="Logo" />
+          <img src="assets/icons/Logo--pinterest.png" alt="Logo" />
+          <img src="assets/icons/Logo--skype.png" alt="Logo" />
+        </div>
       </div>
     </footer>
   </body>
