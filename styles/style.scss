@@ -15,7 +15,7 @@
   font-style: normal;
 }
 
-// Компоненты (кнопки, карточки, ссылки и тд)
+// Компоненты
 .logo.brand {
   font-family: global.$font-family-main;
   font-size: 1.5rem;
@@ -27,12 +27,23 @@
   color: global.$color-primary;
   text-decoration: none;
   padding: 0 0.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.link-nav:hover,
+.link-nav:focus-visible {
+  opacity: 0.7;
 }
 
 .link-footer {
   font-size: 0.875rem;
   color: #fff;
   text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.link-footer:hover {
+  opacity: 0.7;
 }
 
 .btn {
@@ -40,42 +51,55 @@
   border: none;
   cursor: pointer;
   text-wrap: nowrap;
+  transition: all 0.3s ease;
 }
 
-.btn-primary {
-  color: #fff;
-  background-color: global.$color-primary;
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.btn-secondary {
-  color: #fff;
-  background-color: #4a4666;
+.btn:active {
+  transform: translateY(0);
 }
 
-.btn-tertiary {
-  color: global.$color-primary;
-  background-color: global.$color-gray;
+.btn:focus-visible {
+  outline: 2px solid global.$color-primary;
+  outline-offset: 2px;
 }
 
-.btn-white {
-  color: global.$color-primary;
-  background-color: #fff;
-}
+.btn-primary { color: #fff; background-color: global.$color-primary; }
+.btn-secondary { color: #fff; background-color: #4a4666; }
+.btn-tertiary { color: global.$color-primary; background-color: global.$color-gray; }
+.btn-white { color: global.$color-primary; background-color: #fff; }
 
 .btn-icon {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
-  margin: 0 0.5rem 0 0;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+.btn-icon:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn-icon:focus-visible {
+  outline: 2px solid global.$color-primary;
+  outline-offset: 2px;
 }
 
 .input-email {
   background-color: global.$color-gray;
   border: none;
-  padding: 1rem 5rem 1rem 2rem;
+  padding: 1rem 2rem;
   font-size: 1rem;
   color: #000;
+  flex: 1;
+  max-width: 350px;
 }
 
 .input-email-dark {
@@ -83,130 +107,69 @@
   color: #fff;
 }
 
-.benefit-card {
-  flex: 1;
-  text-align: left;
-}
+.benefit-card { flex: 1; text-align: left; }
 
 .product-card {
   flex: 1;
   color: global.$color-primary;
-  transition: transform 0.2s;
-
-  &:hover {
-    transform: translateY(-2px);
-  }
-
-
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
 }
 
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+// Hero
 .hero-content {
-  flex: 3;
-  max-width: 70%;
+  flex: 5;
 
-  h1 {
-    max-width: 450px;
-    margin-bottom: 2rem;
-  }
-
-  p {
-    max-width: 600px;
-    margin-top: 10rem;
-  }
+  h1 { max-width: 450px; margin-bottom: 2rem; }
+  p { max-width: 600px; }
 }
 
 .img-hero {
   flex: 2.3;
-  width: 30%;
   height: auto;
-  object-fit: cover;     
+  object-fit: cover;
 }
 
-.outlets-content {
-  flex: 1;
-
-  button {
-    margin-top: 6rem;
-  }
-}
-
-.img-outlets {
-  flex: 1;
-  width: 50%;
-  height: auto;
-}
+// Outlets
+.outlets-content button { margin-top: 6rem; }
+.img-outlets { flex: 1; height: auto; }
 
 // Глобальные стили
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
-body {
-  font-family: global.$font-family-main;
-}
+body { font-family: global.$font-family-main; }
 
-.header {
-  padding: 1rem 0;
-  margin-bottom: 2rem;
-}
+.header { padding: 1rem 0; }
 
-.nav {
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
-}
+.nav { margin-top: 0.5rem; padding-top: 0.5rem; }
 
-.cart {
-  margin-right: 1rem
-}
+.hero { padding-bottom: 3rem; }
 
-.hero {
-  padding-bottom: 3rem;
-}
+.benefits { margin-top: 2rem; }
+.benefits h2 { margin-bottom: 2rem; }
 
-.benefits {
-  margin-top: 2rem;
-
-  h2 {
-    margin-bottom: 2rem;
-  }
-
-  h3 {
-    margin: 0.5rem 0;
-  }
-}
-
-.products {
-  margin-top: 5rem;
-
-  h2 {
-    margin-bottom: 1rem;
-  }
-
-  &-content {
-    margin-bottom: 2rem;
-  }
-
-  h3 {
-    margin: 0.5rem 0;
-  }
-}
+.products { margin-top: 5rem; }
+.products h2 { margin-bottom: 1rem; }
+.products {&-content { margin-bottom: 2rem; } }
 
 .form {
   margin-top: 5rem;
   width: 100%;
   background-color: global.$color-gray;
 }
-.outlets {
-  margin-top: 5rem;
-}
 
-.footer {
-  margin-top: 5rem;
-  padding: 3rem 3rem 1rem 3rem;
-}
+.outlets { margin-top: 5rem; }
+
+.footer { margin-top: 5rem; padding: 3rem 3rem 1rem 3rem; }
 
 .copyright {
   margin-top: 2rem;
   padding-top: 1rem;
-  border-top-color: rgb(27, 114, 245); 
+  border-top-color: rgb(27, 114, 245);
 }
