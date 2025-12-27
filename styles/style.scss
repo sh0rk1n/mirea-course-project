@@ -36,6 +36,14 @@
   text-decoration: none;
   transition: opacity 0.2s ease;
 
+  @media (max-width: #{global.$bp-lg}) {
+    font-size: 0.75rem;
+  }
+
+  @media (max-width: #{global.$bp-md}) {
+    font-size: 0.65rem;
+  }
+
   &:hover {
     opacity: 0.5;
   }
@@ -101,14 +109,6 @@
   color: #fff;
 }
 
-.input-footer {
-  max-width: 450px;
-
-  @media (max-width: #{global.$bp-lg}) {
-    max-width: 150px;
-  }
-}
-
 .benefit-card {
   flex: 1;
   text-align: left;
@@ -155,24 +155,31 @@
   &-content {
     display: flex;
     flex-direction: column;
-    flex: 5;
+    flex: 2;
 
     button {
       align-self: flex-start;
     }
+
+    p {
+      font-weight: 200 !important;
+    }
   }
 
   &-img {
-    flex: 2.3;
-    height: auto;
-    object-fit: cover;
+    flex: 1;
+    object-fit: cover;    
+    height: 600px;
+    width: 800px;
 
     @media (max-width: #{global.$bp-lg}) {
-      flex: 2;
+      height: 450px;
+      width: 600px;
     }
 
     @media (max-width: #{global.$bp-md}) {
-      display: none;
+      height: 350px;
+      width: 500px;
     }
   }
 }
@@ -194,7 +201,20 @@
       gap: 2rem;
     }
   }
+
+  &-content {
+    @media (max-width: #{global.$bp-md}) {
+        grid-template-columns: 1fr;
+        justify-items: center; 
+    }
+  } 
 }
+
+.benefit-card {
+  @media (max-width: #{global.$bp-md}) {
+       width: 350px;
+    }
+  }
 
 // ---------------------------
 // Products
@@ -217,6 +237,14 @@
       gap: 2.5rem;
     }
   }
+}
+
+// ---------------------------
+// Form
+// ---------------------------
+.form {
+  width: 100%;
+  background-color: global.$color-gray;
 }
 
 // ---------------------------
@@ -250,39 +278,49 @@
   }
 
   @media (max-width: #{global.$bp-md}) {
-    .flex {
-      flex-direction: column;
-      gap: 2.5rem;
-    }
-
     &-content,
     .img-outlets {
       max-width: 100%;
+
+       @media (max-width: #{global.$bp-lg}) {
+      width: 300px;
+    }
+
+    @media (max-width: #{global.$bp-md}) {
+      max-width: 100%;
+    }
     }
   }
-}
-
-// ---------------------------
-// Form
-// ---------------------------
-.form {
-  width: 100%;
-  background-color: global.$color-gray;
 }
 
 // ---------------------------
 // Footer
 // ---------------------------
-.footer > .container > .grid {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
 
-  > div:last-child {
-    grid-column: span 3;
-
-    @media (max-width: #{global.$bp-lg}) {
-      grid-column: span 1;
-    }
+   > div {
+    flex: 1 1 auto;
+    min-width: 0;  
   }
+}
+
+.input-footer {
+  width: 450px;
+  max-width: 420px; 
+  flex: 4 1 1; 
+
+  @media (max-width: #{global.$bp-lg}) {
+        width: 50%;
+        max-width: 220px; 
+    }
+
+    @media (max-width: #{global.$bp-md}) {
+     width: 50%;
+        max-width: 190px; 
+    }
+
 }
 
 .copyright {
