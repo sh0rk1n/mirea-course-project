@@ -1,18 +1,53 @@
 // ---------------------------
 // Variables
 // ---------------------------
-$font-family-main: "Clash", sans-serif; 
-$color-gray: rgb(243, 243, 243);        
-$color-primary: #2c2753;               
+$font-family-main: "Clash", sans-serif;
+$color-gray: rgb(243, 243, 243);
+$color-primary: #2c2753;
 
 // ---------------------------
 // Container
 // ---------------------------
 .container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;           
+
+  display: grid;
+  grid-template-columns:
+    [full-start] 1fr
+    [content-start] minmax(0, 1320px)
+    [content-end] 1fr
+    [full-end];
+
+  > * {
+    grid-column: content-start / content-end;
+  }
 }
+
+// ---------------------------
+// Grid utilities
+// ---------------------------
+.grid {
+  display: grid;
+}
+
+.grid-auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+}
+
+.grid-col-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-col-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-col-4 { grid-template-columns: repeat(4, 1fr); }
+
+// ---------------------------
+// Gap utilities
+// ---------------------------
+.gap-sm { gap: 0.5rem; }
+.gap-md { gap: 1rem; }
+.gap-lg { gap: 2rem; }
+.gap-xl { gap: 4rem; }
 
 // ---------------------------
 // Flex utilities
@@ -24,14 +59,6 @@ $color-primary: #2c2753;
 .align-center { align-items: center; }
 
 // ---------------------------
-// Gap utilities
-// ---------------------------
-.gap-sm { gap: 0.5rem; }
-.gap-md { gap: 1rem; }
-.gap-lg { gap: 2rem; }
-.gap-xl { gap: 4rem; }
-
-// ---------------------------
 // Padding utilities
 // ---------------------------
 .padding-sm { padding: 0.5rem; }
@@ -39,9 +66,6 @@ $color-primary: #2c2753;
 .padding-lg { padding: 2rem; }
 .padding-xl { padding: 4rem; }
 .padding-2xl { padding: 5rem; }
-
-.padding-x-2xl { padding-left: 5rem; padding-right: 5rem; }
-.padding-y-lg { padding-top: 2rem; padding-bottom: 2rem; }
 
 .padding-top-sm { padding-top: 0.5rem; }
 .padding-top-lg { padding-top: 2rem; }
@@ -51,27 +75,40 @@ $color-primary: #2c2753;
 .padding-top-4xl { padding-top: 9rem; }
 .padding-top-5xl { padding-top: 11rem; }
 
+.padding-bottom-sm  { padding-bottom: 0.5rem; }
+.padding-bottom-lg  { padding-bottom: 2rem; }
+.padding-bottom-xl  { padding-bottom: 3rem; }
+.padding-bottom-2xl { padding-bottom: 5rem; }
+.padding-bottom-3xl { padding-bottom: 7rem; }
+.padding-bottom-4xl { padding-bottom: 9rem; }
+.padding-bottom-5xl { padding-bottom: 11rem; }
+
+.padding-x-2xl { padding-left: 5rem; padding-right: 5rem; }
+.padding-y-lg { padding-top: 2rem; padding-bottom: 2rem; }
+.padding-y-xl { padding-top: 3rem; padding-bottom: 3rem; }
+
 // ---------------------------
-// Text utilities
+// Text & alignment
 // ---------------------------
 .text-center { text-align: center; }
 
 // ---------------------------
-// Border utilities
+// Border
 // ---------------------------
 .border-top { border-top: 1px solid $color-gray; }
 
 // ---------------------------
-// Background & Color utilities
+// Background & Color
 // ---------------------------
 .bg-primary { background-color: $color-primary; }
 .bg-light { background-color: $color-gray; }
 .bg-white { background-color: #fff; }
+
 .text-primary { color: $color-primary; }
 .text-white { color: #fff; }
 
 // ---------------------------
-// Font weight utilities
+// Font weight
 // ---------------------------
 .fw-200 { font-weight: 200; }
 .fw-300 { font-weight: 300; }
@@ -79,34 +116,56 @@ $color-primary: #2c2753;
 .fw-bold { font-weight: bold; }
 
 // ---------------------------
-// Typography utilities
+// Typography
 // ---------------------------
 .heading-lg {
   font-family: $font-family-main;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 300;
   line-height: 1.2;
 }
+
 .heading-md {
   font-family: $font-family-main;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  margin-bottom: 1rem;
+  margin-block-end: 1rem;
 }
+
 .heading-sm {
   font-family: $font-family-main;
   font-size: 1.25rem;
   font-weight: 400;
   margin: 0.5rem 0;
 }
+
 .heading-xs {
   font-family: $font-family-main;
   font-size: 1rem;
   font-weight: 300;
-  margin-bottom: 0.5rem;
+  margin-block-end: 0.5rem;
 }
 
-.text-md { font-size: 1.25rem; font-weight: 300; margin: 1rem 0; }
-.text-sm { font-size: 1rem; font-weight: 300; margin: 0.5rem 0; color: $color-primary; }
-.text-xs { font-size: 0.875rem; font-weight: 200; }
-.text-price { font-size: 1rem; font-weight: 400; color: $color-primary; }
+.text-md {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+.text-sm {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0.5rem 0;
+  color: $color-primary;
+}
+
+.text-xs {
+  font-size: 0.875rem;
+  font-weight: 200;
+}
+
+.text-price {
+  font-size: 1rem;
+  font-weight: 400;
+  color: $color-primary;
+}

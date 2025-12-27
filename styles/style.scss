@@ -15,6 +15,9 @@
   font-style: normal;
 }
 
+
+
+
 // Компоненты
 .logo.brand {
   font-family: global.$font-family-main;
@@ -28,11 +31,11 @@
   text-decoration: none;
   padding: 0 0.5rem;
   transition: opacity 0.2s ease;
-}
 
-.link-nav:hover,
-.link-nav:focus-visible {
-  opacity: 0.7;
+  &:hover,
+  &:focus-visible {
+    opacity: 0.7;
+  }
 }
 
 .link-footer {
@@ -40,10 +43,10 @@
   color: #fff;
   text-decoration: none;
   transition: opacity 0.2s ease;
-}
 
-.link-footer:hover {
-  opacity: 0.7;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .btn {
@@ -52,21 +55,21 @@
   cursor: pointer;
   text-wrap: nowrap;
   transition: all 0.3s ease;
-}
 
-.btn:hover {
-  opacity: 0.9;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
+  &:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
 
-.btn:active {
-  transform: translateY(0);
-}
+  &:active {
+    transform: translateY(0);
+  }
 
-.btn:focus-visible {
-  outline: 2px solid global.$color-primary;
-  outline-offset: 2px;
+  &:focus-visible {
+    outline: 2px solid global.$color-primary;
+    outline-offset: 2px;
+  }
 }
 
 .btn-primary { color: #fff; background-color: global.$color-primary; }
@@ -81,15 +84,15 @@
   padding: 0.5rem;
   border-radius: 50%;
   transition: background-color 0.2s ease;
-}
 
-.btn-icon:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
 
-.btn-icon:focus-visible {
-  outline: 2px solid global.$color-primary;
-  outline-offset: 2px;
+  &:focus-visible {
+    outline: 2px solid global.$color-primary;
+    outline-offset: 2px;
+  }
 }
 
 .input-email {
@@ -107,27 +110,50 @@
   color: #fff;
 }
 
-.benefit-card { flex: 1; text-align: left; }
+.benefit-card {
+  flex: 1;
+  text-align: left;
+}
 
 .product-card {
-  flex: 1;
   color: global.$color-primary;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 8px;
+
+  img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px 8px 0 0;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
 }
 
-.product-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+.product-card.large {
+  grid-column: span 2;
 }
 
-
-// Hero
 .hero-content {
   flex: 5;
 
-  h1 { max-width: 450px; margin-bottom: 2rem; }
-  p { max-width: 600px; }
+  h1 {
+    max-width: 450px;
+    margin-bottom: 2rem;
+  }
+
+  button {
+    align-self: flex-start;
+  }
+
+  p {
+    max-width: 600px;
+    margin-top: auto
+  }
 }
 
 .img-hero {
@@ -136,27 +162,63 @@
   object-fit: cover;
 }
 
-// Outlets
-.outlets-content button { margin-top: 6rem; }
-.img-outlets { flex: 1; height: auto; }
+.outlets {
+  margin-top: 5rem;
+}
 
-// Глобальные стили
-html { scroll-behavior: smooth; }
+.outlets-content {
+  button {
+    align-self: flex-start;
+    margin-top:auto;
+    margin-bottom: 3rem;
+  }
+}
 
-body { font-family: global.$font-family-main; }
+.img-outlets {
+  flex: 1;
+  height: auto;
+}
 
-.header { padding: 1rem 0; }
+html {
+  scroll-behavior: smooth;
+}
 
-.nav { margin-top: 0.5rem; padding-top: 0.5rem; }
+body {
+  font-family: global.$font-family-main;
+}
 
-.hero { padding-bottom: 3rem; }
+.header {
+  padding: 1rem 0;
+}
 
-.benefits { margin-top: 2rem; }
-.benefits h2 { margin-bottom: 2rem; }
+.nav {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+}
 
-.products { margin-top: 5rem; }
-.products h2 { margin-bottom: 1rem; }
-.products {&-content { margin-bottom: 2rem; } }
+.hero {
+  padding-bottom: 3rem;
+}
+
+.benefits {
+  margin-top: 2rem;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+}
+
+.products {
+  margin-top: 5rem;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  &-content {
+    margin-bottom: 2rem;
+  }
+}
 
 .form {
   margin-top: 5rem;
@@ -164,12 +226,19 @@ body { font-family: global.$font-family-main; }
   background-color: global.$color-gray;
 }
 
-.outlets { margin-top: 5rem; }
+.input-footer {
+  max-width: 450px;
+}
 
-.footer { margin-top: 5rem; padding: 3rem 3rem 1rem 3rem; }
+.footer > .container > .grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+ 
+  > div:last-child {
+    grid-column: span 3; 
+  }
+}
 
 .copyright {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top-color: rgb(27, 114, 245);
+    border-top-color: #6359b4;
 }
+
