@@ -1,6 +1,9 @@
 @use 'reset';
 @use 'variables/global';
 
+// ---------------------------
+// Fonts
+// ---------------------------
 @font-face {
   font-family: 'Clash';
   src: url('../assets/fonts/ClashDisplay-Variable.ttf') format('truetype-variations');
@@ -15,26 +18,15 @@
   font-style: normal;
 }
 
-
-
-
-// Компоненты
-.logo.brand {
-  font-family: global.$font-family-main;
-  font-size: 1.5rem;
-  color: global.$color-primary;
-}
-
+// ---------------------------
+// Components
+// ---------------------------
 .link-nav {
-  font-size: 0.75rem;
-  color: global.$color-primary;
   text-decoration: none;
-  padding: 0 0.5rem;
   transition: opacity 0.2s ease;
 
-  &:hover,
-  &:focus-visible {
-    opacity: 0.7;
+  &:hover {
+    opacity: 0.5;
   }
 }
 
@@ -45,7 +37,7 @@
   transition: opacity 0.2s ease;
 
   &:hover {
-    opacity: 0.7;
+    opacity: 0.5;
   }
 }
 
@@ -53,8 +45,18 @@
   padding: 1rem 2rem;
   border: none;
   cursor: pointer;
-  text-wrap: nowrap;
+  white-space: nowrap;
   transition: all 0.3s ease;
+
+  @media (max-width: #{global.$bp-lg}) {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: #{global.$bp-md}) {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.75rem;
+  }
 
   &:hover {
     opacity: 0.9;
@@ -82,17 +84,6 @@
   border: none;
   cursor: pointer;
   padding: 0.5rem;
-  border-radius: 50%;
-  transition: background-color 0.2s ease;
-
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-  }
-
-  &:focus-visible {
-    outline: 2px solid global.$color-primary;
-    outline-offset: 2px;
-  }
 }
 
 .input-email {
@@ -110,6 +101,14 @@
   color: #fff;
 }
 
+.input-footer {
+  max-width: 450px;
+
+  @media (max-width: #{global.$bp-lg}) {
+    max-width: 150px;
+  }
+}
+
 .benefit-card {
   flex: 1;
   text-align: left;
@@ -117,8 +116,10 @@
 
 .product-card {
   color: global.$color-primary;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transform-origin: center top;
   border-radius: 8px;
+  background: #fff;
 
   img {
     width: 100%;
@@ -129,116 +130,161 @@
   }
 
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: scale(1.03);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
   }
 }
 
 .product-card.large {
   grid-column: span 2;
-}
 
-.hero-content {
-  flex: 5;
-
-  h1 {
-    max-width: 450px;
-    margin-bottom: 2rem;
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
   }
 
-  button {
-    align-self: flex-start;
-  }
-
-  p {
-    max-width: 600px;
-    margin-top: auto
+  @media (max-width: #{global.$bp-md}) {
+    grid-column: span 1;
   }
 }
 
-.img-hero {
-  flex: 2.3;
-  height: auto;
-  object-fit: cover;
-}
-
-.outlets {
-  margin-top: 5rem;
-}
-
-.outlets-content {
-  button {
-    align-self: flex-start;
-    margin-top:auto;
-    margin-bottom: 3rem;
-  }
-}
-
-.img-outlets {
-  flex: 1;
-  height: auto;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: global.$font-family-main;
-}
-
-.header {
-  padding: 1rem 0;
-}
-
-.nav {
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
-}
-
+// ---------------------------
+// Hero
+// ---------------------------
 .hero {
-  padding-bottom: 3rem;
+  &-content {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+
+    button {
+      align-self: flex-start;
+    }
+  }
+
+  &-img {
+    flex: 2.3;
+    height: auto;
+    object-fit: cover;
+
+    @media (max-width: #{global.$bp-lg}) {
+      flex: 2;
+    }
+
+    @media (max-width: #{global.$bp-md}) {
+      display: none;
+    }
+  }
 }
 
+// ---------------------------
+// Benefits
+// ---------------------------
 .benefits {
-  margin-top: 2rem;
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
 
-  h2 {
-    margin-bottom: 2rem;
+    @media (max-width: #{global.$bp-lg}) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+
+    @media (max-width: #{global.$bp-md}) {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
   }
 }
 
+// ---------------------------
+// Products
+// ---------------------------
 .products {
-  margin-top: 5rem;
-
-  h2 {
-    margin-bottom: 1rem;
-  }
+  h2 { margin-bottom: 1rem; }
 
   &-content {
     margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width: #{global.$bp-lg}) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    @media (max-width: #{global.$bp-md}) {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
   }
 }
 
+// ---------------------------
+// Outlets
+// ---------------------------
+.outlets {
+  &-content {
+    flex: 1;
+    max-width: 50%;
+
+    button {
+      align-self: flex-start;
+      margin-top: auto;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .img-outlets {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+
+    @media (max-width: #{global.$bp-lg}) {
+      max-width: 40%;
+    }
+
+    @media (max-width: #{global.$bp-md}) {
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: #{global.$bp-md}) {
+    .flex {
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    &-content,
+    .img-outlets {
+      max-width: 100%;
+    }
+  }
+}
+
+// ---------------------------
+// Form
+// ---------------------------
 .form {
-  margin-top: 5rem;
   width: 100%;
   background-color: global.$color-gray;
 }
 
-.input-footer {
-  max-width: 450px;
-}
-
+// ---------------------------
+// Footer
+// ---------------------------
 .footer > .container > .grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
- 
+
   > div:last-child {
-    grid-column: span 3; 
+    grid-column: span 3;
+
+    @media (max-width: #{global.$bp-lg}) {
+      grid-column: span 1;
+    }
   }
 }
 
 .copyright {
-    border-top-color: #6359b4;
+  border-top-color: #6359b4;
 }
-
