@@ -220,6 +220,10 @@ body {
   margin-top: 5rem;
 }
 
+.margin-bottom {
+  margin-bottom: 3rem;
+}
+
 .m-top-auto {
   margin-top: auto;
 }
@@ -703,6 +707,9 @@ body {
   .margin-top {
     margin-top: 3rem;
   }
+  .margin-bottom {
+    margin-bottom: 3rem;
+  }
 }
 @media (max-width: 768px) {
   .padding-2xl {
@@ -717,6 +724,9 @@ body {
   }
   .margin-top {
     margin-top: 2rem;
+  }
+  .margin-bottom {
+    margin-bottom: 2rem;
   }
 }
 @media (max-width: 425px) {
@@ -745,6 +755,9 @@ body {
   }
   .padding-top-xl {
     padding-top: 1rem;
+  }
+  .margin-bottom {
+    margin-bottom: 1 rem;
   }
 }
 @media (max-width: 1024px) {
