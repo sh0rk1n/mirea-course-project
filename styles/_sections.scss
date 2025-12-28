@@ -1,0 +1,85 @@
+@use 'variables' as *;
+
+.hero {
+  &-content {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+
+    button {
+      align-self: flex-start;
+    }
+
+    p {
+      font-weight: 200 !important;
+    }
+  }
+
+  &-img {
+    flex: 1;
+    object-fit: cover;    
+    height: 600px;
+    width: 800px;
+  }
+}
+
+.benefits {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.products {
+  h2 { margin-bottom: 1rem; }
+
+  &-content {
+    margin-bottom: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.form {
+  width: 100%;
+  background-color: $color-gray;
+}
+
+.outlets {
+  &-content {
+    flex: 1;
+    max-width: 50%;
+
+    button {
+      align-self: flex-start;
+      margin-top: auto;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .img-outlets {
+    flex: 1;
+    max-width: 50%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+
+  > div {
+    flex: 1 1 auto;
+    min-width: 0;  
+  }
+}
+
+.input-footer {
+  width: 450px;
+  max-width: 420px; 
+  flex: 4 1 1; 
+}
+
+.copyright {
+  border-top-color: #6359b4;
+}

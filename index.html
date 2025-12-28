@@ -2,10 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Removed maximum-scale for WCAG zoom -->
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Avion</title>
@@ -14,18 +12,21 @@
     <header class="header padding-top-md">
       <div class="container">
         <div class="flex justify-between align-center">
-          <button class="btn-icon">
-            <img src="assets/icons/Search.png" alt="Search" />
+          <button class="btn-icon" aria-label="Search">
+            <img src="assets/icons/Search.png" alt="Search icon" />
           </button>
 
           <div class="heading-md text-center">Avion</div>
 
           <div class="flex">
-            <button class="btn-icon">
-              <img src="assets/icons/Shopping--cart.png" alt="Shopping Cart" />
+            <button class="btn-icon" aria-label="Shopping Cart">
+              <img
+                src="assets/icons/Shopping--cart.png"
+                alt="Shopping cart icon"
+              />
             </button>
-            <button class="btn-icon">
-              <img src="assets/icons/User--avatar.png" alt="User Avatar" />
+            <button class="btn-icon" aria-label="User Profile">
+              <img src="assets/icons/User--avatar.png" alt="User avatar icon" />
             </button>
           </div>
         </div>
@@ -53,7 +54,7 @@
             <div
               class="hero-content flex flex-column bg-primary text-white padding-y-2xl padding-x-xl"
             >
-              <h1 class="heading-lg fw-300 padding-bottom-lg">
+              <h1 class="heading-lg fw-300 padding-bottom-md">
                 The furniture brand for the future, with timeless designs
               </h1>
               <button class="btn btn-secondary fw-300 padding-bottom">
@@ -70,7 +71,7 @@
             <img
               class="hero-img"
               src="assets/img/Right_Image.png"
-              alt="Photo Chair"
+              alt="Photo of a chair"
             />
           </div>
         </div>
@@ -78,26 +79,29 @@
 
       <section id="plant-pots" class="benefits margin-top">
         <div class="container">
-          <h2 class="heading-md fw-400 text-center padding-bottom-sm">
+          <h2 class="heading-md fw-400 text-center padding-bottom-md">
             What makes our brand different
           </h2>
           <div class="benefits-content grid grid-auto-fit gap-lg">
             <div class="benefit-card">
-              <img src="assets/icons/Delivery.png" alt="Delivery" />
+              <img src="assets/icons/Delivery.png" alt="Delivery icon" />
               <h3 class="heading-sm fw-400">Next day as standard</h3>
               <p class="text-sm">
                 Order before 3pm and get your order the next day as standard
               </p>
             </div>
             <div class="benefit-card">
-              <img src="assets/icons/Checkmark--outline.png" alt="Checkmark" />
+              <img
+                src="assets/icons/Checkmark--outline.png"
+                alt="Checkmark icon"
+              />
               <h3 class="heading-sm fw-400">Made by true artisans</h3>
               <p class="text-sm">
                 Handmade crafted goods made with real passion and craftsmanship
               </p>
             </div>
             <div class="benefit-card">
-              <img src="assets/icons/Purchase.png" alt="Purchase" />
+              <img src="assets/icons/Purchase.png" alt="Purchase icon" />
               <h3 class="heading-sm fw-400">Unbeatable prices</h3>
               <p class="text-sm">
                 For our materials and quality you won’t find better prices
@@ -105,7 +109,7 @@
               </p>
             </div>
             <div class="benefit-card">
-              <img src="assets/icons/Sprout.png" alt="Sprout" />
+              <img src="assets/icons/Sprout.png" alt="Sprout icon" />
               <h3 class="heading-sm fw-400">Recycled packaging</h3>
               <p class="text-sm">
                 We use 100% recycled packaging to ensure our footprint is
@@ -121,22 +125,22 @@
           <h2 class="heading-md fw-400 text-primary">New ceramics</h2>
           <div class="products-content grid grid-auto-fit gap-lg">
             <article class="product-card">
-              <img src="assets/img/Photo.png" alt="The Dandy chair" />
+              <img src="assets/img/Photo.png" alt="The Dandy chair product" />
               <h3 class="heading-sm fw-400">The Dandy chair</h3>
               <p class="text-price">£250</p>
             </article>
             <article class="product-card">
-              <img src="assets/img/Photo-1.png" alt="Rustic Vase Set" />
+              <img src="assets/img/Photo-1.png" alt="Rustic Vase Set product" />
               <h3 class="heading-sm fw-400">Rustic Vase Set</h3>
               <p class="text-price">£155</p>
             </article>
             <article class="product-card">
-              <img src="assets/img/Photo-2.png" alt="The Silky Vase" />
+              <img src="assets/img/Photo-2.png" alt="The Silky Vase product" />
               <h3 class="heading-sm fw-400">The Silky Vase</h3>
               <p class="text-price">£125</p>
             </article>
             <article class="product-card">
-              <img src="assets/img/Photo-3.png" alt="The Lucy Lamp" />
+              <img src="assets/img/Photo-3.png" alt="The Lucy Lamp product" />
               <h3 class="heading-sm fw-400">The Lucy Lamp</h3>
               <p class="text-price">£399</p>
             </article>
@@ -152,19 +156,22 @@
           <h2 class="heading-md fw-400 text-primary">Our popular products</h2>
           <div class="products-content grid grid-auto-fit gap-lg">
             <article class="product-card large">
-              <img src="assets/img/Large.png" alt="The Poplar suede sofa" />
+              <img
+                src="assets/img/Large.png"
+                alt="The Poplar suede sofa product"
+              />
               <h3 class="heading-sm fw-400">The Poplar suede sofa</h3>
               <p class="text-price">£980</p>
             </article>
 
             <article class="product-card">
-              <img src="assets/img/Photo.png" alt="The Dandy chair" />
+              <img src="assets/img/Photo.png" alt="The Dandy chair product" />
               <h3 class="heading-sm fw-400">The Dandy chair</h3>
               <p class="text-price">£250</p>
             </article>
 
             <article class="product-card">
-              <img src="assets/img/Photo-3.png" alt="The Lucy Lamp" />
+              <img src="assets/img/Photo-3.png" alt="The Lucy Lamp product" />
               <h3 class="heading-sm fw-400">The Lucy Lamp</h3>
               <p class="text-price">£399</p>
             </article>
@@ -193,6 +200,7 @@
                 class="input-email"
                 type="email"
                 placeholder="your@email.com"
+                aria-label="Email address for newsletter"
               />
               <button class="btn btn-primary fw-400" type="submit">
                 Sign up
@@ -209,7 +217,7 @@
               <h2 class="heading-md fw-400 text-primary padding-bottom-sm">
                 From a studio in London to a global brand with over 400 outlets
               </h2>
-              <p class="text-md fw-400 padding-bottom-lg">
+              <p class="text-md fw-400 padding-bottom-sm">
                 When we started Avion, the idea was simple. Make high quality
                 furniture affordable and available for the mass market.
               </p>
@@ -220,7 +228,11 @@
               </p>
               <button class="btn btn-tertiary fw-400">Get in touch</button>
             </div>
-            <img class="img-outlets" src="assets/img/Image.png" alt="Sofa" />
+            <img
+              class="img-outlets"
+              src="assets/img/Image.png"
+              alt="Photo of a sofa"
+            />
           </div>
         </div>
       </section>
@@ -274,6 +286,7 @@
                 class="input-footer input-email input-email-dark"
                 type="email"
                 placeholder="your@email.com"
+                aria-label="Email address for mailing list"
               />
               <button class="btn btn-white fw-400" type="submit">
                 Sign up
@@ -287,9 +300,9 @@
         >
           <p class="text-xs fw-200">Copyright 2022 Avion LTD</p>
           <div class="flex gap-sm">
-            <img src="assets/icons/Logo--linkedin.png" alt="LinkedIn" />
-            <img src="assets/icons/Logo--pinterest.png" alt="Pinterest" />
-            <img src="assets/icons/Logo--skype.png" alt="Skype" />
+            <img src="assets/icons/Logo--linkedin.png" alt="LinkedIn logo" />
+            <img src="assets/icons/Logo--pinterest.png" alt="Pinterest logo" />
+            <img src="assets/icons/Logo--skype.png" alt="Skype logo" />
           </div>
         </div>
       </div>
