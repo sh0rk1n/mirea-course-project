@@ -1,0 +1,272 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+// Links
+@include bp-lg-down {
+  .link-footer { font-size: 0.6rem; }
+}
+
+@include bp-md-down {
+  .link-footer { font-size: 0.5rem; }
+}
+
+@include bp-sm-down {
+  .link-footer { font-size: 0.4rem; } 
+}
+
+// Buttons
+@include bp-lg-down {
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+  }
+}
+
+@include bp-md-down {
+  .btn {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.75rem;
+  }
+}
+
+@include bp-sm-down {
+  .btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+// Inputs
+@include bp-lg-down {
+  .input-email {
+    max-width: 250px;
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+  }
+}
+
+@include bp-md-down {
+  .input-email {
+    max-width: 200px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem; 
+  }
+}
+
+@include bp-sm-down {
+  .input-email {
+    max-width: 150px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+// Cards
+@include bp-md-down {
+  .benefit-card { width: 100%; } 
+  .product-card.large { grid-column: span 1; }
+}
+
+// Hero
+@include bp-lg-down {
+  .hero-img {
+    height: 450px;
+    width: 600px;
+  }
+}
+
+@include bp-md-down {
+  .hero-img {
+    height: 350px;
+    width: 500px;
+  }
+}
+
+@include bp-sm-down {
+  .hero-content {
+    height: 300px;            
+  }
+
+  .hero-img {
+    height: 300px;           
+    width: 120px;         
+  }
+
+
+}
+
+// Benefits
+@include bp-lg-down {
+  .benefits .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@include bp-md-down {
+  .benefits {
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    &-content {
+      grid-template-columns: 1fr;
+      justify-items: center; 
+    }
+  }
+}
+
+// Products
+@include bp-lg-down {
+  .products-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@include bp-md-down {
+  .products-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@include bp-sm-down {
+  .products-content { gap: 1.5rem; }
+  .product-card img { height: auto; } 
+}
+
+// Footer
+@include bp-sm-down {
+  .footer-content {
+    flex-wrap: wrap;
+    justify-content: center;       
+    gap: 1.5rem 1rem;                 
+
+    > div:nth-child(-n+3) {
+      flex: 0 1 auto;                 
+      min-width: 110px;               
+      max-width: 32%;              
+      text-align: left;             // либо можно center попробовать хз  
+      padding: 0.5rem;                
+    }
+
+    
+    > div:last-child {
+      flex-basis: 100%;               
+      max-width: 320px;               
+      width: 100%;
+      text-align: center;             
+      padding-bottom: 1rem;
+    }
+  }
+}
+
+@include bp-sm-down {
+  .input-footer { max-width: 100%; }
+}
+
+// Utilities adaptations
+@include bp-sm-down {
+  .gap-xl { gap: 1rem; }
+  .padding-bottom-lg { padding-bottom: 0.5rem; }
+}
+
+@include bp-md-down {
+  .padding-xl { padding: 2rem; }
+  .padding-x-lg {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .padding-x-xl {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .padding-y-lg {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .padding-y-xl {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@include bp-lg-down {
+  .padding-2xl { padding: 3rem; }
+  .padding-y-2xl {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .padding-top-xl { padding-top: 2rem; }
+  .margin-top { margin-top: 3rem; }
+}
+
+@include bp-md-down {
+  .padding-2xl { padding: 2rem; }
+  .padding-y-2xl {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .padding-top-xl { padding-top: 1.5rem; }
+  .margin-top { margin-top: 2rem; }
+}
+
+@include bp-sm-down {
+  .padding-2xl { padding: 1rem; }
+  .padding-x-lg {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .padding-x-xl {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .padding-y-lg {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .padding-y-xl {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .padding-y-2xl {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .padding-top-xl { padding-top: 1rem; }
+}
+
+// Typography adaptations
+@include bp-lg-down {
+  .heading-lg { font-size: 1.5rem; }
+  .heading-md { font-size: 1.25rem; }
+  .heading-sm { font-size: 1rem; }
+  .heading-xs { font-size: 0.85rem; }
+  .text-md { font-size: 1rem; }
+  .text-sm { font-size: 1rem; }
+  .text-xs { font-size: 0.75rem; }
+  .text-price { font-size: 0.875rem; }
+}
+
+@include bp-md-down {
+  .heading-lg { font-size: 1.25rem; }
+  .heading-md { font-size: 1rem; }
+  .heading-sm { font-size: 0.875rem; }
+  .heading-xs { font-size: 0.7rem; }
+  .text-md { font-size: 0.875rem; }
+  .text-sm { font-size: 0.875rem; }
+  .text-xs { font-size: 0.75rem; }
+  .text-price { font-size: 0.75rem; }
+}
+
+@include bp-sm-down {
+  .heading-lg { font-size: 1.125rem; }
+  .heading-md { font-size: 1rem; }
+  .heading-sm { font-size: 0.875rem; }
+  .heading-xs { font-size: 0.75rem; }
+  .text-md { font-size: 0.575rem; }
+  .text-sm { font-size: 0.575rem; }
+  .text-xs { font-size: 0.45rem; }
+  .text-price { font-size: 0.75rem; }
+}

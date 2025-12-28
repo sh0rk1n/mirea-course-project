@@ -1,0 +1,152 @@
+@use 'variables' as *;
+
+// Grid utilities
+.grid { display: grid; }
+
+.grid-auto-fit {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-col-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-col-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-col-4 { grid-template-columns: repeat(4, 1fr); }
+
+.justify-items { justify-items: center; }
+
+// Gap utilities
+.gap-sm { gap: 0.5rem; }
+.gap-md { gap: 1rem; }
+.gap-lg { gap: 2rem; }
+.gap-xl { gap: 4rem; }
+
+// Flex utilities
+.flex { display: flex; }
+.flex-column { flex-direction: column; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.align-center { align-items: center; }
+
+// Padding utilities
+.padding-sm { padding: 0.5rem; }
+.padding-md { padding: 1rem; }
+.padding-lg { padding: 2rem; }
+.padding-xl { padding: 4rem; }
+.padding-2xl { padding: 5rem; }
+
+.padding-top-sm { padding-top: 0.5rem; }
+.padding-top-md { padding-top: 1rem; }
+.padding-top-lg { padding-top: 2rem; }
+.padding-top-xl { padding-top: 3rem; }
+.padding-top-2xl { padding-top: 5rem; }
+
+.padding-bottom-sm  { padding-bottom: 0.5rem; }
+.padding-bottom-md  { padding-bottom: 1rem; }
+.padding-bottom-lg  { padding-bottom: 2rem; }
+.padding-bottom-xl  { padding-bottom: 3rem; }
+.padding-bottom-2xl { padding-bottom: 5rem; }
+
+.padding-x-lg {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.padding-x-xl {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.padding-y-lg {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.padding-y-xl {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.padding-y-2xl {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+// Margin
+.margin-top { margin-top: 5rem; }
+.m-top-auto { margin-top: auto; }
+
+// Text alignment
+.text-center { text-align: center; }
+
+// Border
+.border-top { border-top: 1px solid $color-gray; }
+
+// Background color
+.bg-primary { background-color: $color-primary; }
+.bg-light { background-color: $color-gray; }
+.bg-white { background-color: #fff; }
+
+.text-primary { color: $color-primary; }
+.text-white { color: #fff; }
+
+// Font weight
+.fw-200 { font-weight: 200; }
+.fw-300 { font-weight: 300; }
+.fw-400 { font-weight: 400; }
+.fw-bold { font-weight: 700; }
+
+// Typography
+.heading-lg {
+  font-family: $font-family-main;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.heading-md {
+  font-family: $font-family-main;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.heading-sm {
+  font-family: $font-family-main;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+.heading-xs {
+  font-family: $font-family-main;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.text-md {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.text-sm {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0.5rem 0;
+  color: $color-primary;
+  line-height: 1.5;
+}
+
+.text-xs {
+  font-size: 0.875rem;
+  font-weight: 200;
+  line-height: 1.5;
+}
+
+.text-price {
+  font-size: 1rem;
+  font-weight: 400;
+  color: $color-primary;
+  line-height: 1.2;
+}

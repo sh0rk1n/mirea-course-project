@@ -1,0 +1,24 @@
+@use 'variables' as *;
+
+body {
+  font-family: $font-family-main;
+  color: $color-primary;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+
+  display: grid;
+  grid-template-columns:
+    [full-start] 1fr
+    [content-start] minmax(0, 1320px)
+    [content-end] 1fr
+    [full-end];
+
+  > * {
+    grid-column: content-start / content-end;
+  }
+}
