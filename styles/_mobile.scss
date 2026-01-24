@@ -5,13 +5,43 @@
 @include bp-lg-down {
   .link-footer { font-size: 0.6rem; }
 }
-
 @include bp-md-down {
   .link-footer { font-size: 0.5rem; }
 }
-
 @include bp-sm-down {
-  .link-footer { font-size: 0.4rem; } 
+  .link-footer { font-size: 0.4rem; }
+}
+
+// Back-to-top
+@media (min-width: 425px) and (max-width: 768px) {
+  .back-to-top {
+    --size: 52px;
+    --right: 20px;
+    --bottom: 28px;
+  }
+}
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .back-to-top {
+    --size: 64px;
+    --right: 40px;
+    --bottom: 48px;
+  }
+}
+
+@media (min-width: 1921px) {
+  .back-to-top {
+    --size: 72px;
+    --right: 60px;
+    --bottom: 60px;
+  }
+}
+
+@media (hover: hover) {
+  .back-to-top:hover {
+    background: #0055dd;
+    transform: translateY(-4px) scale(1.06);
+  }
 }
 
 // Buttons
@@ -21,14 +51,12 @@
     font-size: 0.875rem;
   }
 }
-
 @include bp-md-down {
   .btn {
     padding: 0.6rem 1.25rem;
     font-size: 0.75rem;
   }
 }
-
 @include bp-sm-down {
   .btn {
     padding: 0.4rem 1rem;
@@ -44,15 +72,13 @@
     font-size: 0.75rem;
   }
 }
-
 @include bp-md-down {
   .input-email {
     max-width: 200px;
     padding: 0.5rem 0.75rem;
-    font-size: 0.75rem; 
+    font-size: 0.75rem;
   }
 }
-
 @include bp-sm-down {
   .input-email {
     max-width: 150px;
@@ -63,36 +89,8 @@
 
 // Cards
 @include bp-md-down {
-  .benefit-card { width: 100%; } 
+  .benefit-card { width: 100%; }
   .product-card.large { grid-column: span 1; }
-}
-
-// Hero
-@include bp-lg-down {
-  .hero-img {
-    height: 450px;
-    width: 600px;
-  }
-}
-
-@include bp-md-down {
-  .hero-img {
-    height: 350px;
-    width: 500px;
-  }
-}
-
-@include bp-sm-down {
-  .hero-content {
-    height: 300px;            
-  }
-
-  .hero-img {
-    height: 300px;           
-    width: 120px;         
-  }
-
-
 }
 
 // Benefits
@@ -102,7 +100,6 @@
     gap: 2.5rem;
   }
 }
-
 @include bp-md-down {
   .benefits {
     .grid {
@@ -111,7 +108,7 @@
     }
     &-content {
       grid-template-columns: 1fr;
-      justify-items: center; 
+      justify-items: center;
     }
   }
 }
@@ -123,44 +120,39 @@
     gap: 2rem;
   }
 }
-
 @include bp-md-down {
   .products-content {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
 }
-
 @include bp-sm-down {
   .products-content { gap: 1.5rem; }
-  .product-card img { height: auto; } 
+  .product-card img { height: auto; }
 }
 
 // Footer
 @include bp-sm-down {
   .footer-content {
     flex-wrap: wrap;
-    justify-content: center;       
-    gap: 1.5rem 1rem;                 
-
+    justify-content: center;
+    gap: 1.5rem 1rem;
     > div:nth-child(-n+3) {
-      flex: 0 1 auto;                 
-      min-width: 110px;               
-      max-width: 32%;              
-      text-align: left;             // либо можно center попробовать хз  
-      padding: 0.5rem;                
+      flex: 0 1 auto;
+      min-width: 110px;
+      max-width: 32%;
+      text-align: left; // либо можно center попробовать хз
+      padding: 0.5rem;
     }
-
     > div:last-child {
-      flex-basis: 100%;               
-      max-width: 320px;               
+      flex-basis: 100%;
+      max-width: 320px;
       width: 100%;
-      text-align: center;             
+      text-align: center;
       padding-bottom: 1rem;
     }
   }
 }
-
 @include bp-sm-down {
   .input-footer { max-width: 100%; }
 }
@@ -170,7 +162,6 @@
   .gap-xl { gap: 1rem; }
   .padding-bottom-lg { padding-bottom: 0.5rem; }
 }
-
 @include bp-md-down {
   .padding-xl { padding: 2rem; }
   .padding-x-lg {
@@ -190,7 +181,6 @@
     padding-bottom: 2rem;
   }
 }
-
 @include bp-lg-down {
   .padding-2xl { padding: 3rem; }
   .padding-y-2xl {
@@ -201,7 +191,6 @@
   .margin-top { margin-top: 3rem; }
   .margin-bottom { margin-bottom: 3rem; }
 }
-
 @include bp-md-down {
   .padding-2xl { padding: 2rem; }
   .padding-y-2xl {
@@ -212,7 +201,6 @@
   .margin-top { margin-top: 2rem; }
   .margin-bottom { margin-bottom: 2rem; }
 }
-
 @include bp-sm-down {
   .padding-2xl { padding: 1rem; }
   .padding-x-lg {
@@ -236,40 +224,93 @@
     padding-bottom: 1rem;
   }
   .padding-top-xl { padding-top: 1rem; }
-
-  .margin-bottom { margin-bottom: 1 rem; }
+  .margin-bottom { margin-bottom: 1rem; }
 }
 
 // Typography adaptations
 @include bp-lg-down {
-  .heading-lg { font-size: 1.5rem; }
+  .heading-lg { font-size: 2rem; }     
+  .heading-md { font-size: 1.5rem; }
+  .heading-sm { font-size: 1.25rem; }
+  .heading-xs { font-size: 1rem; }
+  .text-md   { font-size: 1rem; }
+  .text-sm   { font-size: 0.9375rem; }  
+  .text-xs   { font-size: 0.8125rem; }  
+  .text-price { font-size: 1rem; }
+}
+
+@include bp-md-down {  
+  .heading-lg { font-size: 1.75rem; }
+  .heading-md { font-size: 1.375rem; }
+  .heading-sm { font-size: 1.125rem; }
+  .heading-xs { font-size: 0.9375rem; }
+  .text-md   { font-size: 1rem; }          
+  .text-sm   { font-size: 0.9375rem; }    
+  .text-xs   { font-size: 0.8125rem; }    
+  .text-price { font-size: 0.9375rem; }
+}
+
+@include bp-sm-down {   
+  .heading-lg { font-size: 1.5rem; }      
   .heading-md { font-size: 1.25rem; }
-  .heading-sm { font-size: 1rem; }
-  .heading-xs { font-size: 0.85rem; }
-  .text-md { font-size: 1rem; }
-  .text-sm { font-size: 1rem; }
-  .text-xs { font-size: 0.75rem; }
-  .text-price { font-size: 0.875rem; }
+  .heading-sm { font-size: 1.125rem; }
+  .heading-xs { font-size: 1rem; }
+  .text-md   { font-size: 0.9375rem; }     
+  .text-sm   { font-size: 0.875rem; }      
+  .text-xs   { font-size: 0.75rem; }      
+  .text-price { font-size: 0.9375rem; }  
 }
-
+// Burgerf
 @include bp-md-down {
-  .heading-lg { font-size: 1.25rem; }
-  .heading-md { font-size: 1rem; }
-  .heading-sm { font-size: 0.875rem; }
-  .heading-xs { font-size: 0.7rem; }
-  .text-md { font-size: 0.875rem; }
-  .text-sm { font-size: 0.875rem; }
-  .text-xs { font-size: 0.75rem; }
-  .text-price { font-size: 0.75rem; }
-}
-
-@include bp-sm-down {
-  .heading-lg { font-size: 1.125rem; }
-  .heading-md { font-size: 1rem; }
-  .heading-sm { font-size: 0.875rem; }
-  .heading-xs { font-size: 0.75rem; }
-  .text-md { font-size: 0.575rem; }
-  .text-sm { font-size: 0.575rem; }
-  .text-xs { font-size: 0.45rem; }
-  .text-price { font-size: 0.75rem; }
+  .burger-btn {
+    display: block;
+  }
+  .nav-menu {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: white;
+    transform: translateX(100%);
+    transition: transform 0.45s cubic-bezier(0.77, 0.2, 0.05, 1);
+    z-index: 1000;
+    padding: 5rem 2rem 2rem;
+    overflow-y: auto;
+    box-shadow: -8px 0 20px rgba(0,0,0,0.15);
+    ul {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      font-size: 1.25rem;
+      color: $color-primary;
+      text-decoration: none;
+      display: block;
+      padding: 0.8rem 0;
+    }
+  }
+  .nav-menu.active {
+    transform: translateX(0);
+  }
+  .menu-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.45s ease;
+    z-index: 900;
+    pointer-events: none;
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+  }
+  body.menu-open {
+    overflow: hidden;
+  }
 }

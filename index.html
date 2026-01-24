@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Removed maximum-scale for WCAG zoom -->
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
     <link rel="stylesheet" href="styles/style.css" />
     <title>Avion</title>
@@ -16,23 +15,17 @@
             <img src="assets/icons/Search.png" alt="Search icon" />
           </button>
 
-          <div class="heading-md text-center">Avion</div>
+          <div class="heading-md text-center m-auto">Avion</div>
 
-          <div class="flex">
-            <button class="btn-icon" aria-label="Shopping Cart">
-              <img
-                src="assets/icons/Shopping--cart.png"
-                alt="Shopping cart icon"
-              />
-            </button>
-            <button class="btn-icon" aria-label="User Profile">
-              <img src="assets/icons/User--avatar.png" alt="User avatar icon" />
-            </button>
-          </div>
+          <button class="burger-btn" aria-label="Открыть меню">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </button>
         </div>
 
-        <nav class="flex justify-center border-top padding-top-md">
-          <ul class="flex gap-md burger">
+        <nav class="nav-menu flex justify-center border-top padding-top-md">
+          <ul class="flex gap-md">
             <li>
               <a class="link-nav text-sm" href="#plant-pots">Plant pots</a>
             </li>
@@ -307,5 +300,19 @@
         </div>
       </div>
     </footer>
+    <a href="#" class="back-to-top" aria-label="Вернуться наверх">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+      >
+        <path d="M12 19V5M5 12l7-7 7 7" />
+      </svg>
+    </a>
+    <script src="scripts/burger.js" defer></script>
+    <script src="scripts/back-to-top.js" defer></script>
   </body>
 </html>
