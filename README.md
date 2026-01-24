@@ -8,6 +8,8 @@
 
 - [Публичная страница на GitHub Pages](https://n1kr0hs.github.io/mirea-course-project/)
 ![56e9a1731577ee79144289cf542e669a](https://github.com/user-attachments/assets/a232f2fe-9aa9-426b-8609-b54bf2fd0b99)
+
+
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="990" height="990" viewBox="0 0 990 990"><rect width="990" height="990" fill="#ffffff" x="0" y="0"/><g fill="#000000">
 <g transform="translate(220,44) scale(3.7766666666667)"><rect width="6" height="6"/></g>
